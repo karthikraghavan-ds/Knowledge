@@ -6,7 +6,7 @@ st.title("Cheatsheet")
 # Sidebar for topic selection
 topic = st.sidebar.selectbox(
 	"Choose a topic:",
-	["SQL", "Python", "Mathematics","Machine Learning", "Deep Learning", "GCP", "Gen AI","Git"]
+	["SQL", "Python", "Mathematics","Machine Learning", "Deep Learning", "GCP", "Gen AI","Git", "Projects"]
 )
 
 # Show SQL content only if SQL is selected
@@ -16,23 +16,75 @@ if topic == "SQL":
 	st.write("""**Data** - Raw pieces of Information.""")
 	st.write("""**Database** - An organized collection of data stored so it’s easy to find, update, and manage.""")
 	st.write("""**Data and its Types** - Text, Audio, Video, Images, etc.""")
-	st.write("""**Structured** - Easy to store and retrieve data - Tabular data.""")
-	st.write("""**Unstuctured** - Not easy to store and not easy to retrieve.""")
+	st.write("""- **Structured** - Easy to store and retrieve data - Tabular data.""")
+	st.write("""- **Unstuctured** - Not easy to store and not easy to retrieve.""")
 	st.write("""**Database Management System(DBMS)** - """)
+	
 	st.write("""**Keys**""")
+	st.write("- **Primary Key**: Uniquely identifies each record in a table.")
+	st.write("-- Only 1 primary key allowed per table.")
+	st.write("-- Uniquely identifies each record in a table.")
+	st.write("-- Cannot be edited.")
+	st.write("-- Cannot have null values.")
+	st.write("-- Cannot have Duplicate values.")
+     
+
+	st.write("- **Candidate Key**: Is optional primary key.")
+	st.write("-- Can have multiple candidate keys.")
+	st.write("-- Cannot be edited.")
+	st.write("-- Cannot have null values.")
+	st.write("-- Cannot have Duplicate values.")
+     
+
+	st.write("- **Foriegn Key**: Refers to a primary key of a different table.")
+	st.write("-- Can have null values.")
+	st.write("-- Can have Duplicate values.")
+     
+    
+	st.write("- **Unique Key**: Unique Values.")
+	st.write("-- Cannot be edited.")
+	st.write("-- Can have null values.")
+	st.write("-- Cannot have Duplicate values.")
+	st.write()
 	st.write("""**Entity Relationship Diagram(ERD)** - """)
 	st.image("assets/sql_commands.png")
 	
 
-	st.subheader("2. Basic", divider="blue")
+	st.subheader("2. DQL Basics", divider="blue")
 	st.write("""The query selects all columns from the table""")
 	st.code("""SELECT * FROM `table`""")
 	st.write("""NOTE - Using * means all columns but it is a good habit to always use column names""")
+	
 	st.write("""The query selects only required columns from the table""")
 	st.code("""SELECT col1, col2 FROM `table`""")
+	
 	st.write("""The query selects all columns when using * but also adds the columns from the table if added after star""")
 	st.code("""SELECT *,col1, col2 FROM `table`""")
+	
 	st.write("""The query selects all columns when using * but also adds the columns from the table if added after star""")
 	st.code("""SELECT *,col1, col2 FROM `table`""")
 
-# You can add content for other topics below
+
+elif topic == "Python":
+	pass
+
+elif topic == "Mathematics":
+    pass
+
+elif topic == "Machine Learning":
+    pass
+
+elif topic == "Deep Learning":
+    pass    
+
+elif topic == "GCP":
+    pass
+
+elif topic == "Gen AI":
+    pass
+
+elif topic == "Git":
+    pass
+
+elif topic == "Projects":
+    pass
